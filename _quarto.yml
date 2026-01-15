@@ -2,14 +2,32 @@ project:
   type: website
 
 website:
-  title: "ISSS608 - Visual Analytics"
+  title: "Akshaya's Visual Analytics Page"
   navbar:
     left: 
-    - text: "Hands-on Exercise"
+    - text: "Hands-on Exercises"
       menu: 
       - text: "Hands-on Exercise 1"
         href: "HE01.html"
-    - text: "In-class Exercise"
+      - text: "Hands-on Exercise 2"
+        href: "HE02.html"
+      - text: "Hands-on Exercise 3"
+        href: "HE03.html"
+      - text: "Hands-on Exercise 4"
+        href: "HE04.html"
+      - text: "Hands-on Exercise 5"
+        href: "HE05.html"
+      - text: "Hands-on Exercise 6"
+        href: "HE06.html"
+      - text: "Hands-on Exercise 7"
+        href: "HE07.html"
+      - text: "Hands-on Exercise 8"
+        href: "HE08.html"
+      - text: "Hands-on Exercise 9"
+        href: "HE09.html"
+      - text: "Hands-on Exercise 10"
+        href: "HE10.html"
+    - text: "In-class Exercises"
       menu: 
       - text: "In-class Exercise 1"
         href: "IE01.html"
@@ -18,13 +36,17 @@ website:
         text: Home
       - about.qmd
 
+
 format:
   html:
     theme:
-      - journal
-      - brand
-    css: styles.css
+      - minty
     toc: true
+    toc-title: "On this page"
+    page-layout: full
+    smooth-scroll: true
+    number-sections: true
+    
 
 editor: visual
 
