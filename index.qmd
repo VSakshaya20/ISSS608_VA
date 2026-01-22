@@ -7,9 +7,3 @@ title: "ISSS608 - Visual Analytics and Applications"
 **Welcome to Akshaya's Visual Analytics Page.**
 
 In this website, you will find my coursework for the Visual Analytics and Applications module from Singapore Management University for Academic Year 2025-26 January term.
-
----
-listing:
-  contents: "HE01.qmd"
-  type: grid
----

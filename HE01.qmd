@@ -85,8 +85,7 @@ A robust grammar reveals the structure of complex graphics, uncovers connections
 
 ## Layered Grammar in ggplot2
 
-ggplot2 implements [Wilkinson's framework](https://vita.had.co.nz/papers/layered-grammar.html) through seven layered components
-(Wickham 2010): 
+ggplot2 implements [Wilkinson's framework](https://vita.had.co.nz/papers/layered-grammar.html) through seven layered components (Wickham 2010):
 
 ![Hadley Wickham (2010) “A layered grammar of graphics.” Journal of Computational and Graphical Statistics, vol. 19, no. 1, pp. 3–28.](Layer.jpg)
 

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ISSS608 - Visual Analytics and Applications",
     "section": "",
-    "text": "Welcome to Akshaya’s Visual Analytics Page.\nIn this website, you will find my coursework for the Visual Analytics and Applications module from Singapore Management University for Academic Year 2025-26 January term.\n\n\n\n\n\n\n\n\n\n\n\n\nHands-on Exercise 1\n\n\n\n\n\n\nAkshaya Vijayakumar Sivakami\n\n\nJan 10, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to Akshaya’s Visual Analytics Page.\nIn this website, you will find my coursework for the Visual Analytics and Applications module from Singapore Management University for Academic Year 2025-26 January term."
   },
   {
     "objectID": "about.html",
@@ -299,5 +299,89 @@
     "title": "Hands-on Exercise 1",
     "section": "9.2 Working with facet_grid()",
     "text": "9.2 Working with facet_grid()\nfacet_grid() forms a matrix of panels defined by row and column faceting variables. It is most useful when you have two discrete variables, and all combinations of the variables exist in the data.\nThe code chunk below plots a trellis plot using facet_grid().\n\nggplot(data=exam_data, \n       aes(x= MATHS)) +\n  geom_histogram(bins=20) +\n    facet_grid(~ CLASS)"
+  },
+  {
+    "objectID": "HE02.html#installing-and-loading-required-libraries",
+    "href": "HE02.html#installing-and-loading-required-libraries",
+    "title": "Hands-on Exercise 2",
+    "section": "2.1 Installing and Loading Required Libraries",
+    "text": "2.1 Installing and Loading Required Libraries\nIn this exercise, in addition to tidyverse, four additional R packages will be used:\n\nggrepel – provides ggplot2 geoms that prevent overlapping text labels.\nggthemes – offers additional themes, geoms, and scales to enhance ggplot2 visualizations.\nhrbrthemes – supplies typography-focused themes and components for ggplot2.\npatchwork – enables the creation of composite figures by combining multiple ggplot2 plots.\n\nThe code chunk below will check whether these packages are installed and then load them into the current R environment.\n\npacman::p_load(ggrepel, patchwork, hrbrthemes, ggthemes, tidyverse)"
+  },
+  {
+    "objectID": "HE02.html#importing-data",
+    "href": "HE02.html#importing-data",
+    "title": "Hands-on Exercise 2",
+    "section": "2.2 Importing Data",
+    "text": "2.2 Importing Data\nFor the purpose of this exercise, a data file called Exam_data will be used. It consists of year end examination grades of a cohort of primary 3 students from a local school. It is in csv file format.\nThe code chunk below imports exam_data.csv into R environment by using read_csv()function of readr package. readr is one of the tidyverse package.\n\nexam_data &lt;- read_csv(\"Exam_data.csv\")\n\n\nsummary(exam_data)\n\n      ID               CLASS              GENDER              RACE          \n Length:322         Length:322         Length:322         Length:322        \n Class :character   Class :character   Class :character   Class :character  \n Mode  :character   Mode  :character   Mode  :character   Mode  :character  \n                                                                            \n                                                                            \n                                                                            \n    ENGLISH          MATHS          SCIENCE     \n Min.   :21.00   Min.   : 9.00   Min.   :15.00  \n 1st Qu.:59.00   1st Qu.:58.00   1st Qu.:49.25  \n Median :70.00   Median :74.00   Median :65.00  \n Mean   :67.18   Mean   :69.33   Mean   :61.16  \n 3rd Qu.:78.00   3rd Qu.:85.00   3rd Qu.:74.75  \n Max.   :96.00   Max.   :99.00   Max.   :96.00  \n\n\nThere are a total of seven attributes in the exam_data tibble data frame. Four of them are categorical data type and the other three are in continuous data type.\n\nThe categorical attributes are: ID, CLASS, GENDER and RACE.\nThe continuous attributes are: MATHS, ENGLISH and SCIENCE."
+  },
+  {
+    "objectID": "HE02.html#working-with-ggrepel",
+    "href": "HE02.html#working-with-ggrepel",
+    "title": "Hands-on Exercise 2",
+    "section": "3.1 Working with ggrepel",
+    "text": "3.1 Working with ggrepel\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data=exam_data, aes(x= MATHS, y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, size=0.5) +  \n  geom_label_repel(aes(label = ID), fontface = \"bold\") +\n  coord_cartesian(xlim=c(0,100), ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
+  },
+  {
+    "objectID": "HE02.html#working-with-ggtheme-package",
+    "href": "HE02.html#working-with-ggtheme-package",
+    "title": "Hands-on Exercise 2",
+    "section": "4.1 Working with ggtheme package",
+    "text": "4.1 Working with ggtheme package\nggthemes provides ‘ggplot2’ themes that replicate the look of plots by Edward Tufte, Stephen Few, Fivethirtyeight, The Economist, ‘Stata’, ‘Excel’, and The Wall Street Journal, among others.\nIn the example below, The Economist theme is used.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data=exam_data, aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  ggtitle(\"Distribution of Maths scores\") +\n  theme_economist()\n\n\n\n\nIt also provides some extra geoms and scales for ‘ggplot2’. Consult this vignette to learn more."
+  },
+  {
+    "objectID": "HE02.html#working-with-hrbthems-package",
+    "href": "HE02.html#working-with-hrbthems-package",
+    "title": "Hands-on Exercise 2",
+    "section": "4.2 Working with hrbthems package",
+    "text": "4.2 Working with hrbthems package\nhrbrthemes package provides a base theme that focuses on typographic elements, including where various labels are placed as well as the fonts that are used.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  ggtitle(\"Distribution of Maths scores\") +\n  theme_ipsum()\n\n\n\n\nThe second goal centers around productivity for a production workflow. In fact, this “production workflow” is the context for where the elements of hrbrthemes should be used. Consult this vignette to learn more.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  ggtitle(\"Distribution of Maths scores\") +\n  theme_ipsum(axis_title_size = 18,\n              base_size = 15,\n              grid = \"Y\")\n\n\n\n\nWhat can we learn from the code chunk above?\n\naxis_title_size argument is used to increase the font size of the axis title to 18,\nbase_size argument is used to increase the default axis label to 15,\nand grid argument is used to remove the x-axis grid lines."
+  },
+  {
+    "objectID": "HE02.html#creating-composite-graphics-pathwork-methods",
+    "href": "HE02.html#creating-composite-graphics-pathwork-methods",
+    "title": "Hands-on Exercise 2",
+    "section": "5.1 Creating Composite Graphics: pathwork methods",
+    "text": "5.1 Creating Composite Graphics: pathwork methods\nThere are several ggplot2 extension’s functions support the needs to prepare composite figure by combining several graphs such as grid.arrange() of gridExtra package and plot_grid() of cowplot package. In this section, I am going to shared with you an ggplot2 extension called patchwork which is specially designed for combining separate ggplot2 graphs into a single figure.\nPatchwork package has a very simple syntax where we can create layouts super easily. Here’s the general syntax that combines:\n\nTwo-Column Layout using the Plus Sign +.\nParenthesis () to create a subplot group.\nTwo-Row Layout using the Division Sign /"
+  },
+  {
+    "objectID": "HE02.html#combining-two-ggplot2-graphs",
+    "href": "HE02.html#combining-two-ggplot2-graphs",
+    "title": "Hands-on Exercise 2",
+    "section": "5.2 Combining two ggplot2 graphs",
+    "text": "5.2 Combining two ggplot2 graphs\nFigure in the tabset below shows a composite of two histograms created using patchwork. Note how simple the syntax used to create the plot!\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np1 + p2"
+  },
+  {
+    "objectID": "HE02.html#combining-three-ggplot2-graphs",
+    "href": "HE02.html#combining-three-ggplot2-graphs",
+    "title": "Hands-on Exercise 2",
+    "section": "5.3 Combining three ggplot2 graphs",
+    "text": "5.3 Combining three ggplot2 graphs\nMore complex composite can be plotted by using appropriate operators. For example, the composite figure below is plotted by using:\n\n“/” operator to stack two ggplot2 graphs,\n“|” operator to place the plots beside each other,\n“()” operator the define the sequence of the plotting.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(p1 / p2) | p3\n\n\n\n\nTo learn more about, refer to Plot Assembly."
+  },
+  {
+    "objectID": "HE02.html#creating-a-composite-figure-with-tag",
+    "href": "HE02.html#creating-a-composite-figure-with-tag",
+    "title": "Hands-on Exercise 2",
+    "section": "5.4 Creating a composite figure with tag",
+    "text": "5.4 Creating a composite figure with tag\nIn order to identify subplots in text, patchwork also provides auto-tagging capabilities as shown in the figure below.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n((p1 / p2) | p3) + \n  plot_annotation(tag_levels = 'I')"
+  },
+  {
+    "objectID": "HE02.html#creating-figure-with-insert",
+    "href": "HE02.html#creating-figure-with-insert",
+    "title": "Hands-on Exercise 2",
+    "section": "5.5 Creating figure with insert",
+    "text": "5.5 Creating figure with insert\nBeside providing functions to place plots next to each other based on the provided layout. With inset_element() of patchwork, we can place one or several plots or graphic elements freely on top or below another plot.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np3 + inset_element(p2, \n                   left = 0.02, \n                   bottom = 0.7, \n                   right = 0.5, \n                   top = 1)"
+  },
+  {
+    "objectID": "HE02.html#creating-a-composite-figure-by-using-patchwork-and-ggtheme",
+    "href": "HE02.html#creating-a-composite-figure-by-using-patchwork-and-ggtheme",
+    "title": "Hands-on Exercise 2",
+    "section": "5.6 Creating a composite figure by using patchwork and ggtheme",
+    "text": "5.6 Creating a composite figure by using patchwork and ggtheme\nFigure below is created by combining patchwork and theme_economist() of ggthemes package discussed earlier.\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npatchwork &lt;- (p1 / p2) | p3\npatchwork & theme_economist()"
+  },
+  {
+    "objectID": "HE02.html",
+    "href": "HE02.html",
+    "title": "Hands-on Exercise 2",
+    "section": "",
+    "text": "This exercise explores several ggplot2 extensions that enhance the elegance and effectiveness of statistical graphics. The objectives are to:\n\nControl the placement of annotations on graphs using functions from the ggrepel package.\nCreate professional, publication-quality figures with functions from the ggthemes and hrbrthemes packages.\nCombine multiple ggplot2 graphs into composite figures using the patchwork package."
   }
 ]
