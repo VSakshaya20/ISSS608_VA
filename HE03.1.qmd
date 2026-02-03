@@ -399,7 +399,9 @@ girafe(
 ```
 :::
 
-Note: Different from previous example, in this example the ccs customisation request are encoded directly.
+::: callout-note
+Different from previous example, in this example the ccs customisation request are encoded directly.
+:::
 
 ## Combining tooltip and hover effect
 

@@ -29,10 +29,6 @@ Before we dive into the steps for creating an animated statistical graph, it’s
 
 2.  **Animation Attributes**: The animation attributes are the settings that control how the animation behaves. For example, you can specify the duration of each frame, the easing function used to transition between frames, and whether to start the animation from the current frame or from the beginning.
 
-::: callout-tip
-Before you start making animated graphs, you should first ask yourself: Does it makes sense to go through the effort? If you are conducting an exploratory data analysis, a animated graphic may not be worth the time investment. However, if you are giving a presentation, a few well-placed animated graphics can help an audience connect with your topic remarkably better than static counterparts.
-:::
-
 # Getting Started
 
 ## Loading the R packages
@@ -58,8 +54,6 @@ pacman::p_load(readxl, gifski, gapminder,
 
 In this hands-on exercise, the *Data* worksheet from *GlobalPopulation* Excel workbook will be used.
 
-Write a code chunk to import Data worksheet from GlobalPopulation Excel workbook by using appropriate R package from tidyverse family.
-
 ```{r}
 col <- c("Country", "Continent")
 globalPop <- read_xls("GlobalPopulation.xls",
@@ -78,7 +72,7 @@ globalPop <- read_xls("GlobalPopulation.xls",
 -   `mutate` of dplyr package is used to convert data values of Year field into integer.
 :::
 
-Unfortunately, `mutate_each_()` was deprecated in dplyr 0.7.0. and `funs()` was deprecated in dplyr 0.8.0. In view of this, we will re-write the code by using [`mutate_at()`](https://r4va.netlify.app/chap04) as shown in the code chunk below.
+Unfortunately, `mutate_each_()` was deprecated in dplyr 0.7.0. and `funs()` was deprecated in dplyr 0.8.0. In view of this, the code will be rewritten using [`mutate_at()`](https://r4va.netlify.app/chap04) as shown in the code chunk below.
 
 ```{r}
 col <- c("Country", "Continent")
@@ -286,6 +280,7 @@ ggplotly(gg)
 ```
 
 ### Code
+
 ```{r}
 #| echo: true
 #| eval: false
@@ -308,10 +303,12 @@ ggplotly(gg)
 :::
 
 ## Building an animated bubble plot: plot_ly() method
-In this sub-section, you will learn how to create an animated bubble plot by using plot_ly() method.
+
+This sub-section discusses how to create an animated bubble plot by using plot_ly() method.
 
 ::: panel-tabset
 ### Plot
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -333,6 +330,7 @@ bp
 ```
 
 ### Code
+
 ```{r}
 #| echo: true
 #| eval: false

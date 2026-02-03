@@ -15,35 +15,45 @@ website:
         href: "HE03.1.html"
       - text: "Hands-on Exercise 3-B"
         href: "HE03.2.html"
-      - text: "Hands-on Exercise 4"
-        href: "HE04.html"
-      - text: "Hands-on Exercise 5"
-        href: "HE05.html"
+      - text: "Hands-on Exercise 4-A"
+        href: "HE04.1.html"
+      - text: "Hands-on Exercise 4-B"
+        href: "HE04.2.html"
+      - text: "Hands-on Exercise 4-C"
+        href: "HE04.3.html"
+      - text: "Hands-on Exercise 4-D"
+        href: "HE04.4.html"
+      - text: "Hands-on Exercise 5-A"
+        href: "HE05.1.html"
+      - text: "Hands-on Exercise 5-B"
+        href: "HE05.2.html"  
+      - text: "Hands-on Exercise 5-C"
+        href: "HE05.3.html"
+      - text: "Hands-on Exercise 5-D"
+        href: "HE05.4.html"
+      - text: "Hands-on Exercise 5-E"
+        href: "HE05.5.html"
     - text: "In-class Exercises"
       href: "https://public.tableau.com/app/profile/akshaya.v.s/vizzes"
     - text: "Take-home Exercises"
       menu: 
       - text: "Take-home Exercise 1"
         href: "TE01.html"
-      - text: "Take-home Exercise 2"
-        href: "TE02.html"
     - text: "Project"
     right:
       - href: index.qmd
         text: Home
       - about.qmd
 
-
 format:
   html:
     theme:
-      - minty
+      - flatly
+    page-layout: full
     toc: true
     toc-title: "On this page"
-    page-layout: full
     smooth-scroll: true
     number-sections: true
-    
 
 editor: visual
 

@@ -2,8 +2,8 @@
 title: "ISSS608 - Visual Analytics and Applications"
 ---
 
-[![](https://cdn.prod.website-files.com/62f681c18d50325bbd681758/6823205a2bb417e1381945d9_AD_4nXdMfka7JXe8XXpStdAS_iwqs_rLyAFw6JSc84rM7I_JS1wEKIHt7FS8w78_rYcQJue-eEvAlmH8OXrQiVEf218LCw3IjfM1dqd_x8XZFRh-xDXpRyot3A5Ha4sTF-FktAccW4Z9.png)](https://www.explo.co/blog/what-is-visual-analytics)
-
 **Welcome to Akshaya's Visual Analytics Page.**
 
 In this website, you will find my coursework for the Visual Analytics and Applications module from Singapore Management University for Academic Year 2025-26 January term.
+
+[![](https://cdn.prod.website-files.com/62f681c18d50325bbd681758/6823205a2bb417e1381945d9_AD_4nXdMfka7JXe8XXpStdAS_iwqs_rLyAFw6JSc84rM7I_JS1wEKIHt7FS8w78_rYcQJue-eEvAlmH8OXrQiVEf218LCw3IjfM1dqd_x8XZFRh-xDXpRyot3A5Ha4sTF-FktAccW4Z9.png){fig-align="center"}](https://www.explo.co/blog/what-is-visual-analytics)
