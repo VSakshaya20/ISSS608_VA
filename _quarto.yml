@@ -33,6 +33,14 @@ website:
         href: "HE05.4.html"
       - text: "Hands-on Exercise 5-E"
         href: "HE05.5.html"
+      - text: "Hands-on Exercise 6"
+        href: "HE06.html"    
+      - text: "Hands-on Exercise 7-A"
+        href: "HE07.1.html"  
+      - text: "Hands-on Exercise 7-B"
+        href: "HE07.2.html" 
+      - text: "Hands-on Exercise 7-C"
+        href: "HE07.3.html"  
     - text: "In-class Exercises"
       href: "https://public.tableau.com/app/profile/akshaya.v.s/vizzes"
     - text: "Take-home Exercises"
@@ -43,7 +51,6 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:
