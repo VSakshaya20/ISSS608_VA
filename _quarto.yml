@@ -54,6 +54,7 @@ website:
       - text: "Take-home Exercise 2"
         href: "TE02.html"
     - text: "Project"
+      href: "https://cofinfad-lab.netlify.app/"
     right:
       - href: index.qmd
         text: Home
